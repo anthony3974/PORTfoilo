@@ -1,0 +1,145 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Manage Bank Amounts</title>
+	<link rel="icon" href="b-icon.png" type="image/icon">
+	<style>
+		body {
+			background: linear-gradient(to bottom, #a9d6ff, #ddddee, #a9d6ff);
+			font-family: Arial, sans-serif;
+		}
+
+		label {
+			display: block;
+			margin-top: 10px;
+		}
+
+		input[type="text"] {
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			size: 10px;
+		}
+
+		#button {
+			background-color: #337ab7;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			font-size: 16px;
+			border-radius: 5px;
+			margin-top: 20px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		@media only screen and (min-width: 800px) and (max-width: 1000px) and (min-height: 1500px) {
+			body {
+				line-height: 8ch;
+			}
+
+			h1 {
+				font-size: 65px;
+			}
+
+			label {
+				font-size: 45px;
+			}
+
+			input {
+				font-size: 60px;
+				width: 10ch;
+			}
+
+			#button {
+				font-size: 45px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<center id="cen">
+			<h1>Manage Bank Amounts</h1>
+			<form method="post" action="save.php">
+				<label for="tan_credit">TAN Credit Card:</label>
+				<input type="text" name="tan_credit" id="tan_credit" value="0"
+					style="background-color: orange;" required>
+				<label for="tan_bank">TAN Save Account:</label>
+				<input type="text" name="tan_bank" id="tan_bank" value="30155"
+					style="background-color: orange;" required>
+
+				<label for="simp_credit">SIMP Credit Card:</label>
+				<input type="text" name="simp_credit" id="simp_credit" value="0"
+					style="background: linear-gradient(to right, rgb(255, 49, 49), rgb(49, 49, 255));" required>
+				<label for="simp_bank">SIMP Bank Account:</label>
+				<input type="text" name="simp_bank" id="simp_bank" value="0"
+					style="background: linear-gradient(to right, rgb(255, 49, 49), rgb(49, 49, 255));" required>
+
+				<label for="pc_credit">None:</label>
+				<input type="text" name="pc_credit" id="pc_credit" value="0"
+					style="background: linear-gradient(to right, rgb(255, 49, 49), rgb(125, 125, 125), rgb(95, 95, 95));"
+					required>
+				<label for="pc_bank">None:</label>
+				<input type="text" name="pc_bank" id="pc_bank" value="0"
+					style="background: linear-gradient(to right, rgb(255, 49, 49), rgb(125, 125, 125), rgb(95, 95, 95));"
+					required>
+
+				<label for="cibc_credit">CIBC Credit Account:</label>
+				<input type="text" name="cibc_credit" id="cibc_credit" value="0"
+					style="background-color: red;" required>
+				<label for="cibc_bank">Cash:</label>
+				<input type="text" name="cibc_bank" id="cibc_bank" value="0"
+					style="background-color: red;" required>
+
+				<label for="welt_credit">WELT Spend Account:</label>
+				<input type="text" name="welt_credit" id="welt_credit" value="0"
+					style="background-color: black; color: wheat" required>
+				<label for="welt_bank">WELT Save Account:</label>
+				<input type="text" name="welt_bank" id="welt_bank" value="1900"
+					style="background-color: black; color: wheat" required>
+
+				<br>
+				<input type="submit" value="Submit" name="submit" id="button">
+			</form>
+			<script>
+				// get all input elements
+				const inputs = document.querySelectorAll('input');
+
+				// initialize sum to 0
+				let sum = 0;
+
+				// loop through inputs and add their values to sum
+				inputs.forEach(input => {
+					sum += parseFloat(input.value) || 0;
+				});
+
+				// format the sum as a dollar value
+				const formattedSum = sum.toLocaleString('en-US', {
+					style: 'currency',
+					currency: 'USD'
+				});
+
+				// create a new element to display the sum
+				const sumElement = document.createElement('h2');
+				sumElement.textContent = `The sum is: ${formattedSum}`;
+
+				// get the element with ID 'cen'
+				const cenElement = document.getElementById('cen');
+
+				// append the sum element to the 'cen' element
+				cenElement.appendChild(sumElement);
+			</script>
+		</center>
+	</div>
+
+
+
+</body>
+
+</html>

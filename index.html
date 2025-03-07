@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Section</title>
+    <style>
+        .container {
+            display: block;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .containerInner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+            padding: 20px;
+            /* border: 1px solid #ddd; */
+            border-radius: 10px;
+        }
+
+        .heading {
+            font-size: 160%;
+        }
+
+        .text-content {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .image-content img {
+            max-width: 800px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 1000px) {
+
+            .image-content img {
+                max-width: 630px;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+
+            .containerInner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-content {
+                padding-left: 0;
+                padding-bottom: 20px;
+            }
+
+            .image-content img {
+                max-width: 330px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="heading">Title of the Section</h2>
+        <div class="containerInner">
+            <div class="image-content">
+                <img src="image.png" alt="Image Description">
+            </div>
+            <div class="text-content">
+                <p>Web Page with <strong>HTML & PHP</strong> to add all my bank accounts and display the total at the buttom</p>
+                <a href="yourfile.txt" download class="download-btn">Download File</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
