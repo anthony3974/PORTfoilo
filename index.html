@@ -8,7 +8,7 @@
     <style>
         .container {
             display: block;
-            align-items: center;
+            /* align-items: center; */
             justify-content: space-between;
             max-width: 1200px;
             margin: auto;
@@ -19,10 +19,10 @@
 
         .containerInner {
             display: flex;
-            align-items: center;
+            /* align-items: center; */
             justify-content: space-between;
             margin: auto;
-            padding: 20px;
+            padding: 5px;
             /* border: 1px solid #ddd; */
             border-radius: 10px;
         }
@@ -86,8 +86,11 @@
 
         .video-container {
             width: 100%;
-            max-width: 800px;
             margin: 0 auto;
+            max-width: 800px;
+            height: auto;
+            max-height: 660px;
+            border-radius: 10px;
             position: relative;
         }
     </style>
@@ -111,7 +114,7 @@
         <h2 class="heading">Farming Simulator </h2>
         <div class="containerInner">
             <div class="image-content">
-                <video controls width="auto" height="660" class="video-container">
+                <video controls width="940" height="660" class="video-container image-content">
                     <source src="FarmingSimulator\FarmingSimulator.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -146,7 +149,7 @@
         <h2 class="heading">Sim94 Forms</h2>
         <div class="containerInner">
             <div class="image-content">
-                <video controls width="auto" height="660" class="video-container">
+                <video controls width="940" height="660" class="video-container">
                     <source src="Sim94Forms/Sim94Forms.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
