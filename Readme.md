@@ -1,3 +1,3 @@
 ### Publicly hosted webpage about me ###
 
-Link: https://tonycad.com/PORTfolio/
+Go to: https://tonycad.com/PORTfolio/
